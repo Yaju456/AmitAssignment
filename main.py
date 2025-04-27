@@ -3,6 +3,10 @@ import pandas as pd
 # Load the CSV file
 df = pd.read_csv('coffee_sales.csv')  # Replace 'your_file.csv' with your actual file name
 
+# Drop transactions where 'card' is missing or empty
+df = df.dropna(subset=['card'])               # Drop NaN
+df = df[df['card'].str.strip() != '']          # Drop empty strings
+
 # Convert 'datetime' column to pandas datetime type
 df['datetime'] = pd.to_datetime(df['datetime'])
 
