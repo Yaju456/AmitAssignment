@@ -8,5 +8,6 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process <br />
 .\venv\Scripts\activate <br /> <br />
 
 Run the following in terminal <br />
+ pip install pandas, mrjob, pymongo <br/>
  python .\task1_1.py <br />
  python .\task1_2.py .\task1_1_output.txt > task1_2_output.txt <br />
